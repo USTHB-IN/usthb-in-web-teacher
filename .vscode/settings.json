@@ -1,0 +1,38 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    ".next": true,
+    ".vscode": true,
+    "node_modules": true,
+    " .prettier.json": true,
+    ".eslintrc.json": true,
+    "next-env.d.ts": true,
+    "next.config.js": true,
+    "package-lock.json": true,
+    "postcss.config.js": true,
+    "README.md": true,
+    "yarn.lock": true
+  },
+  "hide-files.files": [
+    ".next",
+    ".vscode",
+    "node_modules",
+    " .prettier.json",
+    ".eslintrc.json",
+    "next-env.d.ts",
+    "next.config.js",
+    "package-lock.json",
+    "postcss.config.js",
+    "README.md",
+    "yarn.lock"
+  ]
+}
