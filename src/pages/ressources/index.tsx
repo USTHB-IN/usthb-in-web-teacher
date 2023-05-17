@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
 import Sidebar from "../../components/sidebar";
 import { useState } from "react";
 import Dropdowns from "../../components/dropdowns";
-import UploadFile from "../../components/uploadFile";
+import UploadButton from "../../components/button";
 
 export default function Ressources() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -21,7 +20,10 @@ export default function Ressources() {
           {/* items-center */}
           <div className="bg-[#F1F1F1] h-0.5 w-full"></div>
           <Dropdowns />
-          <UploadFile labelText="Upload New Ressources" />
+          <UploadButton
+            labelText="Upload New Ressources"
+            link="ressources/uploadfiles"
+          />
         </div>
       </div>
     </div>
