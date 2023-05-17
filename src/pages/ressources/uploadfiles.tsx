@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../../components/sidebar";
 import Dropdowns from "../../components/dropdowns";
 import UploadFile from "../../components/uploadFile";
 import UploadedFile from "../../components/uploadedFile";
 
-export default function Uploadfiles() {
+export default function UploadFiles() {
+  const [files, setFiles] = useState<File[]>([]);
+
   return (
     <div className="w-screen">
       <Sidebar />
@@ -14,10 +16,11 @@ export default function Uploadfiles() {
           {/* items-center */}
           <div className="bg-[#F1F1F1] h-0.5 w-full"></div>
           <Dropdowns />
-          <UploadFile labelText="Add a file" />
+          <UploadFile labelText="Add a file" setFile={setFiles} />
           <div className="flex flex-col items-center gap-2">
-            <UploadedFile />
-            <UploadedFile />
+            {files.map((file) => (
+              <UploadedFile file={file} setFile={setFiles} />
+            ))}
           </div>
           <div className="flex justify-center">
             <button className=" absolute bottom-4 bg-blueMain rounded-lg px-10 py-4 text-white font-semibold ">
