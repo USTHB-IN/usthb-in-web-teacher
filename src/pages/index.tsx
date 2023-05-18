@@ -1,11 +1,16 @@
+import { useRouter } from "next/router";
 import Sidebar from "../components/sidebar";
 import { announcement } from "../utils/constants";
-import Dropdown from "./dropdown";
 import AnnouncementDetail from "../components/announcementDetails";
 import Dropdowns from "../components/dropdowns";
 
 export default function Home() {
   const all = [announcement, announcement, announcement, announcement];
+  const router = useRouter();
+
+  const goToNewAnnouncement = () => {
+    router.push('/new-announcement');
+  }
 
   return (
     <div className="w-screen">
@@ -16,7 +21,7 @@ export default function Home() {
           {/* items-center */}
           <div className="bg-[#F1F1F1] h-0.5 w-full"></div>
           {/* Dropdowns */}
-          <Dropdowns/>
+          <Dropdowns />
           <div className="flex flex-col justify-center items-center gap-4 ">
             {all.map((announcement, index) => (
               <AnnouncementDetail
@@ -26,7 +31,10 @@ export default function Home() {
             ))}
           </div>
           <div className="flex justify-center">
-            <button className=" bg-blueMain rounded-lg text-white font-semibold w-1/3 px-2 py-3 absolute bottom-4">
+            <button
+              onClick={goToNewAnnouncement}
+              className=" bg-blueMain rounded-lg text-white font-semibold w-1/3 px-2 py-3 absolute bottom-4"
+            >
               Create New Anouncement
             </button>
           </div>
