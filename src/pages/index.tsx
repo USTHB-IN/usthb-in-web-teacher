@@ -2,15 +2,15 @@ import { useRouter } from "next/router";
 import Sidebar from "../components/sidebar";
 import { announcement } from "../utils/constants";
 import AnnouncementDetail from "../components/announcementDetails";
-import Dropdowns from "../components/dropdowns";
+import Dropdowns from "../components/dropdownsAnnouncement";
 
 export default function Home() {
   const all = [announcement, announcement, announcement, announcement];
   const router = useRouter();
 
   const goToNewAnnouncement = () => {
-    router.push('/new-announcement');
-  }
+    router.push("/new-announcement");
+  };
 
   return (
     <div className="w-screen">

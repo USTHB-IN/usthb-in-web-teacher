@@ -1,8 +1,7 @@
-import React from 'react'
-import Dropdown from '../pages/dropdown';
+import React from "react";
+import Dropdown from "./dropdown";
 
-
-export default function Dropdowns() {
+export default function DropdownsAnnouncement() {
   return (
     <div className="flex flex-row justify-center gap-24">
       <div className="flex flex-col gap-2">

@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/sidebar";
-import Dropdowns from "../components/dropdowns";
+import Dropdowns from "../components/dropdownsAnnouncement";
 
 export default function Newannouncement() {
   return (
@@ -24,7 +24,7 @@ export default function Newannouncement() {
             <div className="w-2/3 py-4">
               <p className="font-semibold">The Announcement :</p>
               <textarea
-                placeholder="Type the title here"
+                placeholder="Type the announcement here"
                 className="p-36 pt-2 pl-2  outline-none rounded-md border w-full no-resize"
                 style={{ resize: "none" }}
               />

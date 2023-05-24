@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/sidebar";
-import Dropdowns from "../components/dropdowns";
+import Dropdowns from "../components/dropdownsAnnouncement";
 import UploadFile from "../components/uploadFile";
 import UploadedFile from "../components/uploadedFile";
 
