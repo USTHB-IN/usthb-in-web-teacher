@@ -126,23 +126,23 @@ const Dropdown = () => {
           <a
             href="#"
             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            onClick={() => handleOptionClick("ACAD")}
+            onClick={() => handleOptionClick("L1")}
           >
-            ACAD
+            L1
           </a>
           <a
             href="#"
             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            onClick={() => handleOptionClick("ISIL")}
+            onClick={() => handleOptionClick("L2")}
           >
-            ISIL
+            L2
           </a>
           <a
             href="#"
             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            onClick={() => handleOptionClick("GTR")}
+            onClick={() => handleOptionClick("L3")}
           >
-            GTR
+            L3
           </a>
         </div>
       )}
@@ -151,4 +151,3 @@ const Dropdown = () => {
 };
 
 export default Dropdown;
-

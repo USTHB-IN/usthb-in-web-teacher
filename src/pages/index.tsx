@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Sidebar from "../components/sidebar";
 import { announcement } from "../utils/constants";
 import AnnouncementDetail from "../components/announcementDetails";
-import Dropdowns from "../components/dropdownsAnnouncement";
+import DropdownsAll from "../components/dropdownsAll";
 
 export default function Home() {
   const all = [announcement, announcement, announcement, announcement];
@@ -21,7 +21,7 @@ export default function Home() {
           {/* items-center */}
           <div className="bg-[#F1F1F1] h-0.5 w-full"></div>
           {/* Dropdowns */}
-          <Dropdowns />
+          <DropdownsAll page="" />
           <div className="flex flex-col justify-center items-center gap-4 ">
             {all.map((announcement, index) => (
               <AnnouncementDetail

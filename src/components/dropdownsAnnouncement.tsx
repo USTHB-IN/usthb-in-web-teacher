@@ -1,5 +1,8 @@
 import React from "react";
 import Dropdown from "./dropdown";
+import DropdownSection from "./dropdownSection";
+import DropdownYear from "./dropdownYear";
+import DropdownDate from "./dropdownDate";
 
 export default function DropdownsAnnouncement() {
   return (
@@ -10,11 +13,15 @@ export default function DropdownsAnnouncement() {
       </div>
       <div className="flex flex-col gap-2">
         <p className="font-semibold"> Academic Year :</p>
-        <Dropdown />
+        <DropdownYear />
       </div>{" "}
       <div className="flex flex-col gap-2">
         <p className="font-semibold">Section :</p>
-        <Dropdown />
+        <DropdownSection />
+      </div>
+      <div className="flex flex-col gap-2">
+        <p className="font-semibold">Deadline :</p>
+        <DropdownDate />
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import Sidebar from "../../components/sidebar";
 import Dropdowns from "../../components/dropdownsAnnouncement";
+import DropdownsAll from "../../components/dropdownsAll";
 
 export default function NewHomework() {
-
   return (
     <div className="w-screen">
       <Sidebar />
@@ -11,7 +11,7 @@ export default function NewHomework() {
         <div className="bg-white h-full flex flex-col  rounded-lg pb-4 pt-4 gap-4 relative">
           <p className="pl-56 font-semibold ">New Homework</p>
           <div className="bg-[#F1F1F1] h-0.5 w-full"></div>
-          <Dropdowns />
+          <DropdownsAll page="homework" />
           <div className="flex flex-col items-center">
             <div className="w-2/3 py-4">
               <p className="font-semibold">The Homework's Title :</p>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Sidebar from "../components/sidebar";
-import Dropdowns from "../components/dropdownsAnnouncement";
 import UploadFile from "../components/uploadFile";
 import UploadedFile from "../components/uploadedFile";
+import DropdownsAll from "../components/dropdownsAll";
 
 export default function Ressources() {
   const [files, setFiles] = useState<File[]>([]);
@@ -16,7 +16,7 @@ export default function Ressources() {
         <div className="bg-white h-full flex flex-col  rounded-lg pb-4 pt-4 gap-4 relative">
           <p className="pl-56 font-semibold ">Upload Ressources</p>
           <div className="bg-[#F1F1F1] h-0.5 w-full"></div>
-          <Dropdowns />
+          <DropdownsAll page="" />
           <UploadFile labelText="Add a file" setFile={setFiles} />
           <div className="flex flex-col items-center gap-2">
             {files.map((file) => (
