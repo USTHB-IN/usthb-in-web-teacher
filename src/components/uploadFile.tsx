@@ -6,7 +6,7 @@ interface UploadFilesProps {
   setFile: React.Dispatch<React.SetStateAction<File[]>>;
 }
 
-export default function UploadFiles({ labelText, setFile }: UploadFilesProps) {
+export default function UploadFile({ labelText, setFile }: UploadFilesProps) {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       const file = event.target.files[0];

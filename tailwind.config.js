@@ -23,7 +23,7 @@ module.exports = {
         yellow: "#FFC700",
         green: "#14AE5C",
         strokeColor: "#EAEAEA",
-        separatorCol: "#E8E8E8"
+        separatorCol: "#E8E8E8",
       },
 
       backgroundImage: {
@@ -31,6 +31,8 @@ module.exports = {
           "linear-gradient(to right, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
         bottomGradient:
           "linear-gradient(to top, rgba(240,240,240,0.7) 60%, rgba(240,240,240,0.3))",
+        avatargradient2:
+          "linear-gradient(to right, #CC2B5E 50%, #753A88 100%)",
       },
 
       // fontWeight: {

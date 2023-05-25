@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/sidebar";
-import Dropdowns from "../components/dropdownsAnnouncement";
+import DropdownsAll from "../components/dropdownsAll";
 
 export default function Newannouncement() {
   return (
@@ -11,7 +11,7 @@ export default function Newannouncement() {
           <p className="pl-56 font-semibold ">New Announcement</p>
           {/* items-center */}
           <div className="bg-[#F1F1F1] h-0.5 w-full"></div>
-          <Dropdowns />
+          <DropdownsAll page="" />
           <div className="flex flex-col items-center">
             <div className="w-2/3 py-4">
               <p className="font-semibold">The Announcement's Title :</p>
