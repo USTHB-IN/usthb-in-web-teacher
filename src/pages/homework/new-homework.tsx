@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Sidebar from "../../components/sidebar";
 import DropdownsAll from "../../components/dropdownsAll";
-import UploadFile from "../../components/uploadFile";
-import UploadedFile from "../../components/uploadedFile";
+import UploadFiles from "../../components/uploadFiles";
+import UploadedFiles from "../../components/uploadedFiles";
 
 export default function NewHomework() {
   const [files, setFiles] = useState<File[]>([]);
@@ -35,10 +35,10 @@ export default function NewHomework() {
               />
             </div>
           </div>
-          <UploadFile labelText="Add a file" setFile={setFiles} />
+          <UploadFiles labelText="Add a file" setFile={setFiles} />
           <div className="flex flex-col items-center gap-2 h-max">
             {files.map((file) => (
-              <UploadedFile key={file.name} file={file} setFile={setFiles} />
+              <UploadedFiles key={file.name} file={file} setFile={setFiles} />
             ))}
           </div>
 

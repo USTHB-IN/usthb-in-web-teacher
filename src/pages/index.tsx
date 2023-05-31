@@ -35,7 +35,7 @@ export default function Home() {
               onClick={goToNewAnnouncement}
               className=" bg-blueMain rounded-lg text-white font-semibold w-1/3 px-2 py-3 absolute bottom-4"
             >
-              Create New Anouncement
+              Create New Announcement
             </button>
           </div>
         </div>

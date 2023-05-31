@@ -3,14 +3,14 @@ import { TbSquareRoundedArrowDownFilled } from "react-icons/tb";
 
 interface UploadFilesProps {
   labelText: string;
-  setFile: React.Dispatch<React.SetStateAction<File[]>>;
+  setFile: React.Dispatch<React.SetStateAction<File | null>>;
 }
 
-export default function UploadFile({ labelText, setFile }: UploadFilesProps) {
+export default function UploadFiles({ labelText, setFile }: UploadFilesProps) {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       const file = event.target.files[0];
-      setFile((prevSelectedFiles) => [...prevSelectedFiles, file]);
+      setFile(file);
       console.log(file);
     }
   };
@@ -25,7 +25,12 @@ export default function UploadFile({ labelText, setFile }: UploadFilesProps) {
             <p className="font-semibold">{labelText}</p>
             <TbSquareRoundedArrowDownFilled className="w-6 h-6" />
           </div>
-          <input id="dropzone-file" type="file" className="hidden" onChange={handleFileChange}/>
+          <input
+            id="dropzone-file"
+            type="file"
+            className="hidden"
+            onChange={handleFileChange}
+          />
         </label>
       </div>
     </div>

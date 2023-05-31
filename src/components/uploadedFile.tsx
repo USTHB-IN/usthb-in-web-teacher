@@ -4,16 +4,14 @@ import { BsFileEarmarkTextFill } from "react-icons/bs";
 
 interface UploadedFileProps {
   file: File;
-  setFile: React.Dispatch<React.SetStateAction<File[]>>;
+  setFile: React.Dispatch<React.SetStateAction<File | null>>;
 }
 
 export default function UploadedFile({ file, setFile }: UploadedFileProps) {
   const handleDelete = () => {
-    setFile((prevSelectedFiles) =>
-      prevSelectedFiles.filter((prevFile) => prevFile !== file)
-    );
+    setFile(null);
   };
-  
+
   return (
     <div className="rounded-md border flex flex-row justify-center items-center w-max py-2 px-4 gap-4">
       <BsFileEarmarkTextFill className="text-black w-6 h-6" />
