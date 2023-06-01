@@ -3,10 +3,17 @@ import Sidebar from "../components/sidebar";
 import { announcement } from "../utils/constants";
 import AnnouncementDetail from "../components/announcementDetails";
 import DropdownsAll from "../components/dropdownsAll";
+import { useEffect } from "react";
 
 export default function Home() {
-  const all = [announcement, announcement, announcement, announcement];
   const router = useRouter();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      router.replace("/signin");
+    }
+  }, []);
+  const all = [announcement, announcement, announcement, announcement];
 
   const goToNewAnnouncement = () => {
     router.push("/new-announcement");

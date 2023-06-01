@@ -4,15 +4,14 @@ import { BsFileEarmarkTextFill } from "react-icons/bs";
 
 interface UploadedFileProps {
   file: File;
-  deleteFile: React.Dispatch<React.SetStateAction<File | null>>;
+  setFile: React.Dispatch<React.SetStateAction<File[]>>;
 }
 
-export default function UploadedFile({
-  file,
-  deleteFile,
-}: UploadedFileProps) {
+export default function UploadedFiles({ file, setFile }: UploadedFileProps) {
   const handleDelete = () => {
-    deleteFile(null);
+    setFile((prevSelectedFiles) =>
+      prevSelectedFiles.filter((prevFile) => prevFile !== file)
+    );
   };
 
   return (

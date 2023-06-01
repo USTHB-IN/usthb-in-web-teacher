@@ -13,7 +13,7 @@ module.exports = {
         white: "#FFFFFF",
         blueMain: "#3452B5",
         blue: "#0D99FF",
-        desactiveColor: "#A1A1A1",
+        deactivateColor: "#A1A1A1",
         bgColor: "#F1F1F1",
         orange: "#FF8541",
         red: "#F42C00",
@@ -27,11 +27,11 @@ module.exports = {
       },
 
       backgroundImage: {
-        avatargradient1:
+        avatarGradient1:
           "linear-gradient(to right, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
         bottomGradient:
           "linear-gradient(to top, rgba(240,240,240,0.7) 60%, rgba(240,240,240,0.3))",
-        avatargradient2:
+        avatarGradient2:
           "linear-gradient(to right, #CC2B5E 50%, #753A88 100%)",
       },
 

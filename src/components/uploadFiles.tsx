@@ -3,17 +3,15 @@ import { TbSquareRoundedArrowDownFilled } from "react-icons/tb";
 
 interface UploadFilesProps {
   labelText: string;
-  uploadFile: React.Dispatch<React.SetStateAction<File | null>>;
+  setFile: React.Dispatch<React.SetStateAction<File[]>>;
 }
 
-export default function UploadFiles({
-  labelText,
-  uploadFile,
-}: UploadFilesProps) {
+export default function UploadFiles({ labelText, setFile }: UploadFilesProps) {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       const file = event.target.files[0];
-      uploadFile(file);
+      setFile((prevSelectedFiles) => [...prevSelectedFiles, file]);
+      console.log(file);
     }
   };
   return (
